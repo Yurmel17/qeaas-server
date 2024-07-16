@@ -1,0 +1,8 @@
+[submodule "libcoap-proxy-tfg"]
+	path = libcoap-proxy-tfg
+	url = https://gitlab.gast.it.uc3m.es/qursa/qeaas/libcoap-proxy-tfg.git
+	branch = proxy-dockerized
+[submodule "nginx_reverse_proxy/quantis-qrng-tls-pq-bench"]
+	path = nginx_reverse_proxy/quantis-qrng-tls-pq-bench
+	url = https://github.com/qursa-uc3m/quantis-qrng-tls-pq-bench.git
+	ignore = dirty
