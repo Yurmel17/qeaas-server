@@ -1,0 +1,37 @@
+services:
+  libcoap-proxy:
+    build:
+      context: ./libcoap-proxy-tfg
+      dockerfile: Dockerfile
+    image: my-coap2http-server
+    container_name: my-coap2http-server
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: ["./build/coap2HttpServer", "-A", "::1", "-c", "./certs/server_cert.pem", "-j", "./certs/server_key.pem", "-P", ",my_proxy"]
+    restart: "no"
+
+  nginx-proxy:
+    build:
+      context: ./nginx_reverse_proxy/quantis-qrng-tls-pq-bench/quantis-qrng-nginx
+      dockerfile: Dockerfile
+    image: oqs-nginx
+    container_name: oqs-nginx
+    network_mode: host
+    ports:
+      - "4433:4433"
+    restart: "no"
+
+  qrng-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: qrng-api
+    container_name: qrng-api
+    network_mode: host
+    stdin_open: true
+    tty: true
+    ports:
+      - "6065:6065"
+    command: ["./eaas-quantis-qrng-api"]
+    restart: "no"

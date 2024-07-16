@@ -1,0 +1,6 @@
+# exclude build folder
+build/
+# exclude drogon folder
+drogon/
+# exclude nginx_reverse_proxy folder
+nginx_reverse_proxy/
