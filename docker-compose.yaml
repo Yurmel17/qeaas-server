@@ -1,7 +1,7 @@
 services:
   libcoap-proxy:
     build:
-      context: ./libcoap-proxy-tfg
+      context: ./coap2http-proxy
       dockerfile: Dockerfile
     image: my-coap2http-server
     container_name: my-coap2http-server
@@ -24,7 +24,7 @@ services:
 
   qrng-api:
     build:
-      context: .
+      context: ./eaas-quantis-qrng-api
       dockerfile: Dockerfile
     image: qrng-api
     container_name: qrng-api

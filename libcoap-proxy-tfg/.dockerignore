@@ -1,6 +1,0 @@
-# exclude build folder
-build/
-# exclude libcoap folder
-libcoap/
-# exclude wolfssl folder
-wolfssl/
