@@ -1,8 +1,6 @@
-[submodule "coap2http-proxy"]
-	path = coap2http-proxy
+[submodule "coap2http-proxy/coap2http-proxy"]
+	path = coap2http-proxy/coap2http-proxy
 	url = https://github.com/qursa-uc3m/coap2http-proxy.git
-	branch = proxy-dockerized
 [submodule "nginx_reverse_proxy/quantis-qrng-tls-pq-bench"]
 	path = nginx_reverse_proxy/quantis-qrng-tls-pq-bench
 	url = https://github.com/qursa-uc3m/quantis-qrng-tls-pq-bench.git
-	ignore = dirty
